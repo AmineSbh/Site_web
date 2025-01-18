@@ -1,0 +1,65 @@
+/* Section globale */
+#About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+/* Conteneur général de la section */
+.about-section {
+  display: flex;
+  flex-direction: column; /* Disposition verticale pour le titre et le conteneur */
+  align-items: center; /* Centrer les éléments (titre et contenu) */
+  justify-content: center;
+}
+
+/* Conteneur de l'image et du texte */
+.about-container {
+  display: flex;
+  justify-content: space-between; /* Met l'image et le texte de chaque côté */
+  align-items: center; /* Centre verticalement */
+  gap: 30px; /* Espacement entre l'image et le texte */
+  max-width: 1200px; /* Limite la largeur du conteneur */
+  width: 100%;
+}
+
+/* Image */
+.about-container .image {
+  width: 300px; /* Taille fixe pour l'image */
+  height: 300px; /* Taille fixe pour l'image */
+  border-radius: 50%; /* Rendre l'image ronde */
+  box-shadow: 0 0 50px #077b32; /* Ombre portée */
+  overflow: hidden; /* Cache tout ce qui dépasse */
+}
+
+/* Contenu du texte */
+.about-container .content {
+  width: 60%; /* Largeur pour le texte */
+}
+
+/* Animation de l'image et du texte */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="zoom-out"] {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1s, transform 1s;
+}
+
+[data-aos="zoom-out"].aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}

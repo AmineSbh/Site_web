@@ -1,0 +1,57 @@
+#Skills {
+  text-align: center; /* Centrer le texte */
+  display: block; /* Assurer que la section occupe toute la largeur disponible */
+  margin-top: 20px; /* Espacement au-dessus de la section */
+  padding: 20px; /* Espacement à l'intérieur de la section */
+}
+
+.skills-container {
+  display: flex; /* Disposition en flexbox */
+  justify-content: center; /* Centrer les catégories horizontalement */
+  gap: 20px; /* Espace entre les catégories */
+  flex-wrap: wrap; /* Permet aux catégories de se replier sur plusieurs lignes si nécessaire */
+  margin-top: 40px; /* Espace entre le titre et le contenu */
+}
+
+.skills-category {
+  margin-inline: 60px; /* Espacement entre les catégories */
+  width: 250px; /* Limite la largeur des catégories */
+}
+
+.skills-category h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.skill p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #077b32;
+}
+
+.progress-bar .progress {
+  transition: width 0.5s ease-in-out;
+}

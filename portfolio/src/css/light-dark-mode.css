@@ -1,0 +1,42 @@
+/* light-dark-mode.css */
+body.light-mode {
+  background-color: #d7d7d7;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.light-mode nav {
+  background-color: #d7d7d7;
+}
+
+body.dark-mode nav {
+  background-color: #333;
+}
+
+body.light-mode .logo {
+  color: black;
+}
+
+body.dark-mode .logo {
+  color: white;
+}
+
+body.light-mode .logo span {
+  color: #077b32;
+}
+
+body.dark-mode .logo span {
+  color: #0a4b21;
+}
+
+/* Texte de typewriter en mode clair (light-mode) */
+body.dark-mode .main-container .content {
+  color: white;
+}
+body.light-mode .main-container .content {
+  color: black;
+}

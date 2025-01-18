@@ -1,0 +1,45 @@
+#Services {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.services-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #333;
+  color: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+.service-card:hover {
+  background-color: #4caf50; /* Vert lors du survol */
+  transform: translateY(-10px); /* Effet de survol */
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: #fff;
+}
