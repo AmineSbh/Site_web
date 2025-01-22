@@ -21,13 +21,17 @@ button {
 }
 
 section {
+  height: auto;
   display: flex;
-  margin-top: 0;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: calc(100vh - 10vh);
   text-align: center;
+  width: 80%;
+}
+/* Correction du z-index et des marges pour éviter que la navbar passe sur l'image */
+section {
+  width: 100%;
+  margin-top: 20vh; /* Ajouter une marge pour l'espace sous la navbar */
 }
 
 /* titre h2 */

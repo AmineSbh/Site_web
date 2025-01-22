@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "main": {
+    "greeting": "Hey I'm",
+    "intro": "I'm an IT engineer specialized in data, AI, and application development.",
+    "download": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm Amine SABBAHI, 26 years old and recently graduated from ESIEA, an engineering school specialized in digital technology. Curious and passionate about web development and new technologies, I love exploring the latest trends and pushing the boundaries of what's possible. My journey has taught me to be rigorous and persevering, but also to appreciate teamwork and moments of sharing."
+  },
+  "skills": {
+    "title": "My Skills",
+    "categories": {
+      "programming": "Programming Languages",
+      "technologies": "Technologies",
+      "ml": "Machine Learning & Data Science"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "tutoring": {
+      "title": "Tutoring",
+      "description": "Assistance for school and university homework."
+    },
+    "webdev": {
+      "title": "Web & Mobile Development",
+      "description": "Creation of custom websites and mobile applications."
+    },
+    "bots": {
+      "title": "Bot Development",
+      "description": "Creation of WhatsApp, Telegram, and Discord bots."
+    },
+    "scraping": {
+      "title": "Web Scraping",
+      "description": "Data collection from websites for analysis."
+    },
+    "freelance": {
+      "title": "Data Analysis & Development",
+      "description": "Consulting in data analysis and solution development."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  }
+}

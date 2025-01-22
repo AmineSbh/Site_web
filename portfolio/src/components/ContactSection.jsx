@@ -1,88 +1,90 @@
 import React, { useState } from 'react';
-import { translations } from '../functions/translation.js';
 
-function ContactSection({ language }) {
+const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  
   const [status, setStatus] = useState('');
-  const t = translations[language].contact;
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
-
-    // Simuler l'envoi (à remplacer par votre vraie logique d'envoi)
-    setTimeout(() => {
-      setStatus('sent');
+    setLoading(true);
+    
+    try {
+      // Simuler l'envoi
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus(''), 3000);
-    }, 1000);
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    } catch (error) {
+      setStatus('error');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <section id="Contact">
-      <div className="contact-container" data-aos="fade-up" data-aos-duration="1500">
-        <h2>{t.title}</h2>
+      <div className="contact-container">
+        <h2>Contactez-moi</h2>
         
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
+            <label htmlFor="name">Nom complet</label>
             <input
+              id="name"
               type="text"
               name="name"
               value={formData.name}
-              onChange={handleChange}
-              placeholder={t.form.name}
+              onChange={(e) => setFormData({...formData, name: e.target.value})}
               required
+              placeholder="Votre nom"
             />
           </div>
-          
+
           <div className="form-group">
+            <label htmlFor="email">Email</label>
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
-              placeholder={t.form.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
               required
+              placeholder="votre@email.com"
             />
           </div>
-          
+
           <div className="form-group">
+            <label htmlFor="message">Message</label>
             <textarea
+              id="message"
               name="message"
               value={formData.message}
-              onChange={handleChange}
-              placeholder={t.form.message}
+              onChange={(e) => setFormData({...formData, message: e.target.value})}
               required
+              placeholder="Votre message..."
             />
           </div>
-          
-          <button 
-            type="submit"
-            disabled={status === 'sending'}
-          >
-            {status === 'sending' ? '...' : t.form.submit}
+
+          <button type="submit" disabled={loading}>
+            {loading ? 'Envoi...' : 'Envoyer'}
           </button>
-          
-          {status === 'sent' && (
-            <div className="success-message">
-              Message envoyé avec succès !
-            </div>
-          )}
         </form>
+
+        {status === 'success' && (
+          <div className="success-message">Message envoyé avec succès !</div>
+        )}
+        {status === 'error' && (
+          <div className="error-message">Une erreur est survenue.</div>
+        )}
       </div>
     </section>
   );
-}
+};
 
 export default ContactSection;

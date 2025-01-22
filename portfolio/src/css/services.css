@@ -1,24 +1,16 @@
-#Services {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.services-container {
-  width: 80%;
-  margin: 0 auto;
-}
-
 .services-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .service-card {
   background-color: #333;
   color: #fff;
-  width: 300px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 cartes par ligne avec un gap */
+  max-width: 300px; /* Limite la largeur maximale */
+  min-width: 250px; /* Largeur minimale */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -195,10 +195,3 @@ body.light-theme .navbar .links a {
     margin: 0 10px;
   }
 }
-
-/* Correction du z-index et des marges pour éviter que la navbar passe sur l'image */
-section {
-  width: 100%;
-  height: 90vh;
-  margin-top: 10vh; /* Ajouter une marge pour l'espace sous la navbar */
-}

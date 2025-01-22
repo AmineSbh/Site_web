@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
 
-function Navbar() {
-  const [language, setLanguage] = useState('en'); // Langue par défaut : Anglais
-  const [theme, setTheme] = useState('dark'); // Thème par défaut : sombre
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Etat du menu hamburger
+function Navbar({ language, onLanguageChange }) {
+  const [theme, setTheme] = useState('dark');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Change la langue
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
+  const handleLanguageChange = (e) => {
+    onLanguageChange(e.target.value);
   };
 
   // Bascule entre le thème sombre et clair
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
-    document.body.classList.toggle('light-theme'); // Applique un thème clair ou sombre globalement
+    document.body.classList.toggle('light-theme');
   };
 
-  // Ouvrir le menu hamburger
+  // Ouvrir/fermer le menu hamburger
   const hamburg = () => {
-    setIsMenuOpen(true); // Ouvre le menu
+    setIsMenuOpen(true);
   };
 
-  // Fermer le menu hamburger
   const cancel = () => {
-    setIsMenuOpen(false); // Ferme le menu
+    setIsMenuOpen(false);
   };
 
   return (
@@ -52,7 +50,7 @@ function Navbar() {
         <div className="controls">
           {/* Langue */}
           <div className="language-selector">
-            <select onChange={(e) => handleLanguageChange(e.target.value)} value={language}>
+            <select onChange={handleLanguageChange} value={language}>
               <option value="fr">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" className="flag-icon" />
                 Français
