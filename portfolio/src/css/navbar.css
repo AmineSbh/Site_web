@@ -34,6 +34,10 @@ body.light-theme {
   background-color: black; /* Couleur sombre par défaut */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide pour la navbar */
 }
+/* Classe pour la transparence */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparence */
+}
 
 /* Mode clair pour la navbar */
 body.light-theme .navbar {

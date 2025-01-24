@@ -8,8 +8,14 @@
   },
   "main": {
     "greeting": "Hey I'm",
+    "iam": "I'm a",
     "intro": "I'm an IT engineer specialized in data, AI, and application development.",
-    "download": "Download CV"
+    "download": "Download CV",
+    "roles": {
+      "developer": "DEVELOPER",
+      "designer": "DESIGNER",
+      "youtuber": "YOUTUBER"
+    }
   },
   "about": {
     "title": "About Me",
