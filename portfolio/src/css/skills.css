@@ -3,6 +3,7 @@
   display: block; /* Assurer que la section occupe toute la largeur disponible */
   margin-top: 20px; /* Espacement au-dessus de la section */
   padding: 20px; /* Espacement à l'intérieur de la section */
+  background-color: rgba(35, 35, 35, 0.247);
 }
 
 .skills-container {

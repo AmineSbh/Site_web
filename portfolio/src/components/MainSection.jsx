@@ -64,7 +64,7 @@ function MainSection() {
           <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
             {t('main.intro')}
           </p>
-          <button data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+          <button className="custom-btn" data-aos="fade-right" data-aos-duration="1500" >
             {t('main.download')}
           </button>
         </div>

@@ -10,6 +10,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
+  background-color: black; /* Couleur de fond sombre */
+  color: white; /* Texte clair */
 }
 
 a {

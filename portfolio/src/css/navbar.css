@@ -1,27 +1,11 @@
-/* navbar.css */
-
 /* Importation de la police */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  height: 100vh;
-  color: #fff;
-  background-color: black; /* Fond noir pour le mode sombre */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide sur la couleur de fond et du texte */
-}
-
-/* Mode Clair */
-body.light-theme {
-  background-color: #d7d7d7; /* Fond clair */
-  color: #333; /* Texte sombre en mode clair */
 }
 
 /* Navbar */
@@ -31,33 +15,32 @@ body.light-theme {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: black; /* Couleur sombre par défaut */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide pour la navbar */
-}
-/* Classe pour la transparence */
-.navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparence */
+  backdrop-filter: blur(5px); /* Flou léger */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparence légère */
+  backdrop-filter: blur(10px); /* Flou pour ce qui est derrière la navbar */
 }
 
-/* Mode clair pour la navbar */
-body.light-theme .navbar {
-  background-color: #d7d7d7; /* Fond clair */
-  color: #333; /* Texte sombre en mode clair */
-}
-
-/* Structure de la navbar */
 .nav-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  height: 100%;
+  width: 100%;
 }
 
+/* Logo */
 .logo {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+}
+
+.logo:hover {
+  transform: scale(1.2); /* Zoom au survol du logo */
+  color: #077b32; /* Changement de couleur au survol */
 }
 
 .logo span {
@@ -65,136 +48,135 @@ body.light-theme .navbar {
   text-shadow: 0 0 10px #077b32;
 }
 
-/* Liens de la navbar */
-.nav-container .links {
+/* Liens */
+.links {
   display: flex;
+  justify-content: center; /* Centre les liens */
+  flex-grow: 1; /* Fait en sorte que les liens prennent tout l'espace entre le logo et les boutons */
 }
 
-.nav-container .links a {
-  position: relative;
-  font-size: 1.2rem;
+.links a {
   color: white;
-  margin: 0 20px;
+  position: relative;
+  font-size: 1rem; /* Police plus petite */
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: 550;
+  font-weight: 500;
   transition: 0.3s linear;
 }
 
-.nav-container .links a::before {
-  position: absolute;
+.links a::before {
   content: "";
+  position: absolute;
   bottom: -3px;
   left: 0;
   width: 0%;
   height: 3px;
   background-color: #077b32;
-  transition: 0.2s linear;
+  transition: width 0.2s linear;
 }
 
-.nav-container .links a:hover::before {
+.links a:hover::before {
   width: 100%;
 }
 
-.nav-container .links a:hover {
+.links a:hover {
   color: #077b32;
 }
 
+/* Lien actif */
+.link.active a {
+  color: #077b32;
+  font-weight: bold;
+}
+
 /* Menu hamburger */
-.hamburg,
-.cancel {
-  cursor: pointer;
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  color: white;
+.hamburg {
   display: none;
-  font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-}
-
-/* Réactions au mode clair */
-body.light-theme .navbar .logo,
-body.light-theme .navbar .links a {
-  color: #333; /* Changer la couleur des textes pour le mode clair */
-}
-
-/* Menu déroulant */
-.dropdown {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  transform: translateY(-500px);
-  width: 100%;
-  height: auto;
-  backdrop-filter: blur(4px) brightness(40%);
-  box-shadow: 0 0 20px black;
-  transition: 0.2s linear;
-}
-
-.dropdown .links a {
-  display: flex;
+  font-size: 2rem;
+  background: none;
+  border: none;
   color: white;
-  text-decoration: none;
-  justify-content: center;
-  padding: 15px 0;
-  align-items: center;
-  transition: 0.2s linear;
+  cursor: pointer;
 }
 
-.dropdown .links a:hover {
-  background-color: #077b32;
+@media (max-width: 884px) {
+  .hamburg {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .links.active {
+    display: flex;
+  }
 }
 
 .controls {
   display: flex;
   align-items: center;
+  gap: 20px;
+  justify-content: flex-end; /* Aligne les contrôles à droite */
 }
 
-.flag-icon {
-  width: 20px;
-  margin-right: 8px;
+.language-selector select {
+  font-size: 1rem;
+  padding: 8px;
+  background-color: #077b32;
+  border: 1px solid #077b32;
+  color: white;
+  border-radius: 5px;
+}
+
+.language-selector select:hover {
+  background-color: #055d24;
+}
+
+.language-selector option {
+  background-color: white; /* Style de l'option */
+  color: black;
 }
 
 .theme-toggle {
-  background: none;
+  font-size: 100%;
+  padding: 10px;
   border: none;
-  color: white;
-  font-size: 1.5rem;
+  background: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  color: var(--theme-icon-color);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .theme-toggle:hover {
   transform: scale(1.2);
+  color: #f39c12; /* Couleur dorée pour un effet visuel */
+}
+
+.theme-icon {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.theme-toggle .theme-icon {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 /* Responsive */
-@media (max-width: 884px) {
-  .nav-container .links {
-    display: none; /* Cacher les liens pour les écrans plus petits */
-  }
-
-  .hamburg {
-    display: block; /* Afficher le menu hamburger */
-  }
-
-  .hamburg.active + .nav-container .links {
-    display: flex; /* Afficher le menu lorsque le hamburger est activé */
-    flex-direction: column;
-    margin-top: 20px;
-  }
-
-  .main-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media (max-width: 440px) {
   .logo {
     font-size: 1.5rem;
   }
 
-  .nav-container .links a {
+  .links a {
     font-size: 1rem;
     margin: 0 10px;
   }

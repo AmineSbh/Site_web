@@ -10,7 +10,9 @@ button {
   font-size: 120%;
   font-weight: 700;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s !important;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
 }
 
 button:hover {

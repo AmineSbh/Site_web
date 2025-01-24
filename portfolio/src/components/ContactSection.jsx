@@ -71,7 +71,7 @@ const ContactSection = () => {
             />
           </div>
 
-          <button type="submit" disabled={loading}>
+          <button className="custom-btn" type="submit" disabled={loading}>
             {loading ? 'Envoi...' : 'Envoyer'}
           </button>
         </form>
