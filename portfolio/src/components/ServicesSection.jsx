@@ -1,47 +1,74 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Importer le hook pour accéder aux traductions
-import "../css/services.css"; // Assurez-vous de créer ce fichier CSS
+import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y } from 'swiper/modules';
 
-function ServicesSection({ language }) {
-  const { t } = useTranslation(); // Utilisation du hook useTranslation pour obtenir la fonction t
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import "../css/services.css";
+
+function ServicesSection() {
+  const { t } = useTranslation();
 
   return (
     <section id="Services">
       <div className="services-container">
-        {/* Titre de la section */}
-        <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">{t('services.title')}</h2>
+        <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+          {t('services.title')}
+        </h2>
         
-        <div className="services-list">
-          {/* Service 1 */}
-          <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-            <h3>{t('services.tutoring.title')}</h3>
-            <p>{t('services.tutoring.description')}</p>
-          </div>
-          
-          {/* Service 2 */}
-          <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-            <h3>{t('services.webdev.title')}</h3>
-            <p>{t('services.webdev.description')}</p>
-          </div>
-          
-          {/* Service 3 */}
-          <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-            <h3>{t('services.bots.title')}</h3>
-            <p>{t('services.bots.description')}</p>
-          </div>
-          
-          {/* Service 4 */}
-          <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
-            <h3>{t('services.scraping.title')}</h3>
-            <p>{t('services.scraping.description')}</p>
-          </div>
-          
-          {/* Service 5 */}
-          <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
-            <h3>{t('services.freelance.title')}</h3>
-            <p>{t('services.freelance.description')}</p>
-          </div>
-        </div>
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          pagination={{ 
+            clickable: true, 
+            dynamicBullets: true 
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }}
+          className="services-swiper"
+        >
+          <SwiperSlide>
+            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+              <h3>{t('services.tutoring.title')}</h3>
+              <p>{t('services.tutoring.description')}</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+              <h3>{t('services.webdev.title')}</h3>
+              <p>{t('services.webdev.description')}</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+              <h3>{t('services.bots.title')}</h3>
+              <p>{t('services.bots.description')}</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
+              <h3>{t('services.scraping.title')}</h3>
+              <p>{t('services.scraping.description')}</p>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+              <h3>{t('services.freelance.title')}</h3>
+              <p>{t('services.freelance.description')}</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
