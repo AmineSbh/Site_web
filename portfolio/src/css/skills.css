@@ -3,7 +3,7 @@
   display: block; /* Assurer que la section occupe toute la largeur disponible */
   margin-top: 20px; /* Espacement au-dessus de la section */
   padding: 20px; /* Espacement à l'intérieur de la section */
-  background-color: rgba(35, 35, 35, 0.247);
+  height: 88vh;
 }
 
 .skills-container {
@@ -55,4 +55,68 @@
 
 .progress-bar .progress {
   transition: width 0.5s ease-in-out;
+}
+
+/* Media Queries */
+
+/* Pour tablette (768px ou moins) */
+@media (max-width: 768px) {
+  #Skills {
+    padding: 10px; /* Réduit le padding pour tablette */
+    height: auto;
+    margin-bottom: 7%;
+  }
+
+  .skills-container {
+    gap: 15px; /* Réduit l'espace entre les catégories */
+    margin-top: 20px; /* Réduit l'espacement avec le titre */
+    width: 80%;
+    justify-content: center; /* Centre les enfants horizontalement */
+    margin-left: auto; /* Centre le conteneur */
+    margin-right: auto; /* Centre le conteneur */
+  }
+
+  .skills-category {
+    width: 200px; /* Réduit la largeur des catégories */
+    margin-inline: 20px; /* Réduit l'espacement sur les côtés */
+  }
+
+  .skill p {
+    font-size: 1rem; /* Réduit la taille du texte */
+  }
+
+  .progress-bar {
+    height: 8px; /* Réduit la hauteur de la barre de progression */
+  }
+}
+
+/* Pour téléphone (480px ou moins) */
+@media (max-width: 480px) {
+  #Skills {
+    padding: 5px; /* Réduit encore le padding */
+    height: auto;
+    margin-bottom: 7%;
+  }
+
+  .skills-container {
+    flex-direction: column; /* Empile les catégories verticalement */
+    gap: 20px; /* Ajuste l'espace entre les catégories */
+    width: 80%;
+    justify-content: center; /* Centre les enfants horizontalement */
+    margin-left: auto; /* Centre le conteneur */
+    margin-right: auto; /* Centre le conteneur */
+  }
+
+  .skills-category {
+    width: 90%; /* Les catégories occupent 90% de la largeur */
+    margin-inline: 0; /* Supprime les marges latérales */
+  }
+
+  .skill p {
+    font-size: 0.9rem; /* Réduit encore la taille du texte */
+  }
+
+  .progress-bar {
+    height: 6px; /* Réduit davantage la hauteur de la barre de progression */
+  }
 }

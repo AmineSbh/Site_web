@@ -8,7 +8,9 @@ import MainSection from './components/MainSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ServicesSection from './components/ServicesSection';
+import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 
 function App() {
   const [language, setLanguage] = useState('fr'); // 'fr' comme langue par défaut
@@ -32,7 +34,9 @@ function App() {
       <AboutSection language={language} />
       <SkillsSection language={language} />
       <ServicesSection language={language} />
+      <ProjectSection language={language} />
       <ContactSection language={language} />
+      <Footer language={language} />
     </div>
   );
 }

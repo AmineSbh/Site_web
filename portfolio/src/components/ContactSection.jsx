@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next'; // Import du hook de traduction
 
 const ContactSection = () => {
+  const { t } = useTranslation(); // Accès à la fonction de traduction
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,11 +32,11 @@ const ContactSection = () => {
   return (
     <section id="Contact">
       <div className="contact-container">
-        <h2>Contactez-moi</h2>
+        <h2>{t('contact.title')}</h2> {/* Titre traduit */}
         
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
-            <label htmlFor="name">Nom complet</label>
+            <label htmlFor="name">{t('contact.form.name')}</label> {/* Label pour le champ "Nom" */}
             <input
               id="name"
               type="text"
@@ -42,12 +44,12 @@ const ContactSection = () => {
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
               required
-              placeholder="Votre nom"
+              placeholder={t('contact.form.name')} 
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t('contact.form.email')}</label> {/* Label pour le champ "Email" */}
             <input
               id="email"
               type="email"
@@ -55,32 +57,32 @@ const ContactSection = () => {
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
               required
-              placeholder="votre@email.com"
+              placeholder={t('contact.form.email')} 
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t('contact.form.message')}</label> {/* Label pour le champ "Message" */}
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}
               required
-              placeholder="Votre message..."
+              placeholder={t('contact.form.message')} 
             />
           </div>
 
           <button className="custom-btn" type="submit" disabled={loading}>
-            {loading ? 'Envoi...' : 'Envoyer'}
+            {loading ? t('contact.form.submit') : t('contact.form.submit')} {/* Texte du bouton */}
           </button>
         </form>
 
         {status === 'success' && (
-          <div className="success-message">Message envoyé avec succès !</div>
+          <div className="success-message">{t('contact.form.submit')}</div> 
         )}
         {status === 'error' && (
-          <div className="error-message">Une erreur est survenue.</div>
+          <div className="error-message">{t('contact.form.submit')}</div> 
         )}
       </div>
     </section>

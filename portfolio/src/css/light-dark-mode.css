@@ -28,6 +28,15 @@ body.dark-mode nav {
   backdrop-filter: blur(10px); /* Flou pour ce qui est derrière la navbar */
 }
 
+/* card */
+body.dark-mode .project-card {
+  background-color: white;
+}
+
+body.light-mode .project-card {
+  background-color: black;
+}
+
 /* Logo */
 .logo {
   transition: color 0.3s ease;

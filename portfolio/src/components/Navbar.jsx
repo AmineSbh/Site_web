@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaSun, FaMoon } from 'react-icons/fa'; // Icônes soleil et lune
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const [theme, setTheme] = useState('dark'); // Valeur par défaut 'dark'
+  const [theme, setTheme] = useState('dark'); // Valeur par défaut
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour gérer l'ouverture du menu hamburger
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour le menu hamburger
 
-
-  // Gère le changement de langue
+  // Changement de langue
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
   };
@@ -23,7 +22,7 @@ function Navbar() {
     document.body.classList.add(newTheme === 'dark' ? 'dark-mode' : 'light-mode');
   };
 
-  // Détecte le défilement pour appliquer un état "scrolled"
+  // Détecte le défilement
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -33,12 +32,7 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Initialisation du thème au premier chargement
-  useEffect(() => {
-    document.body.classList.add('dark-mode'); // Mode sombre par défaut
-  }, []);
-
-  // Gère l'ouverture et la fermeture du menu hamburger
+  // Gère l'ouverture/fermeture du menu hamburger
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -46,31 +40,34 @@ function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
+        {/* Logo */}
         <div className="logo">
           Amine <span>SABBAHI</span>
         </div>
-        <div className="links">
-          {['home', 'about', 'skills', 'services', 'contact'].map((item) => (
+
+        {/* Liens de navigation */}
+        <div className={`links ${isMenuOpen ? 'active' : ''}`}>
+          {['home', 'about', 'skills', 'services', 'projects', 'contact'].map((item) => (
             <div key={item} className="link">
-              <a href={`#${item}`}>
+              <a href={`#${item}`} onClick={() => setIsMenuOpen(false)}>
                 {t(`nav.${item}`)}
               </a>
             </div>
           ))}
         </div>
+
+        {/* Contrôles de langue et thème */}
         <div className="controls">
-          {/* Sélecteur de langue */}
           <div className="language-selector">
             <select
               onChange={(e) => handleLanguageChange(e.target.value)}
               value={i18n.language}
             >
-              <option value="fr">Français</option>
-              <option value="en">English</option>
+              <option value="fr">Fr</option>
+              <option value="en">En</option>
             </select>
           </div>
 
-          {/* Bouton de changement de thème */}
           <div onClick={toggleTheme} className="theme-toggle">
             {theme === 'dark' ? (
               <FaMoon className="theme-icon" />
@@ -78,6 +75,11 @@ function Navbar() {
               <FaSun className="theme-icon" />
             )}
           </div>
+        </div>
+
+        {/* Bouton menu hamburger */}
+        <div className="hamburg" onClick={toggleMenu}>
+          ☰
         </div>
       </div>
     </nav>

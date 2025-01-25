@@ -4,6 +4,7 @@
     "about": "À propos",
     "skills": "Compétences",
     "services": "Services",
+    "projects": "Projets",
     "contact": "Contact"
   },
   "main": {
@@ -60,5 +61,27 @@
       "message": "Message",
       "submit": "Envoyer le message"
     }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "project1": {
+      "title": "Projet 1",
+      "description": "Description du projet 1."
+    },
+    "project2": {
+      "title": "Projet 2",
+      "description": "Description du projet 2."
+    }
+  },
+  "footer": {
+    "title": "Contactez-moi",
+    "contactInfo": "Vous pouvez me contacter via email ou téléphone.",
+    "address": "123 Rue de la Technologie, Paris, France",
+    "social": "Réseaux sociaux",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "copyright": "Copyright",
+    "copyrightText": "© 2025 Tous droits réservés"
   }
 }

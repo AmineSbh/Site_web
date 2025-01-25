@@ -1,3 +1,7 @@
+/* #Services {
+  background-color: rgba(35, 35, 35, 0.247);
+}
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -8,50 +12,9 @@
 .service-card {
   background-color: #333;
   color: #fff;
-  flex: 1 1 calc(33.333% - 20px); /* 3 cartes par ligne avec un gap */
-  max-width: 300px; /* Limite la largeur maximale */
-  min-width: 250px; /* Largeur minimale */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 1rem;
-}
-
-.service-card:hover {
-  background-color: #4caf50; /* Vert lors du survol */
-  transform: translateY(-10px); /* Effet de survol */
-}
-
-.service-card:hover h3,
-.service-card:hover p {
-  color: #fff;
-}
-
-/* 
-.services-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.services-list {
-  display: flex;
-  justify-content: flex-start;
-  animation: slide 20s linear infinite; 
-
-.service-card {
-  background-color: #333;
-  color: #fff;
-  flex: 0 0 300px; 
-  margin-right: 30px; 
+  flex: 1 1 calc(33.333% - 20px); 
+  max-width: 300px; 
+  min-width: 250px; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -69,7 +32,48 @@
 
 .service-card:hover {
   background-color: #4caf50; 
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: #fff;
+} */
+
+.services-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-list {
+  display: flex;
+  justify-content: flex-start;
+  animation: slide 20s linear infinite;
+}
+
+.service-card {
+  background-color: #333;
+  color: #fff;
+  flex: 0 0 300px;
+  margin-right: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+.service-card:hover {
+  background-color: #4caf50;
+  transform: translateY(-10px);
 }
 
 .service-card:hover h3,
@@ -82,7 +86,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
 }
- */
