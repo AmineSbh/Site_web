@@ -11,6 +11,7 @@ import ServicesSection from './components/ServicesSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   const [language, setLanguage] = useState('fr'); // 'fr' comme langue par défaut
@@ -37,6 +38,9 @@ function App() {
       <ProjectSection language={language} />
       <ContactSection language={language} />
       <Footer language={language} />
+
+      {/* Bouton global */}
+      <ScrollToTopButton />
     </div>
   );
 }

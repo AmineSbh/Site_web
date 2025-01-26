@@ -22,18 +22,20 @@ function ServicesSection() {
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={1} /* Par défaut : 1 slide visible */
           navigation
-          pagination={{ 
-            clickable: true, 
-            dynamicBullets: true 
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
           }}
           breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+            480: { slidesPerView: 1 }, // 1 slide pour les petits écrans
+            768: { slidesPerView: 2 }, // 2 slides pour les tablettes
+            1024: { slidesPerView: 3 }, // 3 slides pour les grands écrans
           }}
           className="services-swiper"
         >
+
           <SwiperSlide>
             <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
               <h3>{t('services.tutoring.title')}</h3>

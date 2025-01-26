@@ -15,7 +15,7 @@ function AboutSection() {
         <div className="about-container">
           {/* Image */}
           <div className="image" data-aos="zoom-out" data-aos-duration="200">
-            <img src="main.png" alt={t('about.imageAlt', 'About Image')} />
+            <img src="src/assets/images/photo_linkdin.jpeg" alt={t('about.imageAlt', 'About Image')} />
           </div>
 
           {/* Contenu */}

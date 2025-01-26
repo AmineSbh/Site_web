@@ -40,7 +40,6 @@
 
 .logo:hover {
   transform: scale(1.2); /* Zoom au survol du logo */
-  color: #077b32; /* Changement de couleur au survol */
 }
 
 .logo span {

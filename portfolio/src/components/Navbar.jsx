@@ -47,7 +47,7 @@ function Navbar() {
 
         {/* Liens de navigation */}
         <div className={`links ${isMenuOpen ? 'active' : ''}`}>
-          {['home', 'about', 'skills', 'services', 'projects', 'contact'].map((item) => (
+          {['Home', 'About', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
             <div key={item} className="link">
               <a href={`#${item}`} onClick={() => setIsMenuOpen(false)}>
                 {t(`nav.${item}`)}

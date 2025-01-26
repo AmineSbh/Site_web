@@ -1,29 +1,47 @@
 /* Services Section Styles */
 #Services {
   background-color: rgba(35, 35, 35, 0.247);
-  padding: 50px 0;
+  height: 88vh;
 }
 
+/* Réduction du conteneur des cartes */
 .services-container {
-  max-width: 1200px;
+  max-width: 90%; /* Réduit la largeur */
+  overflow: hidden; /* Évite les scrolls horizontaux */
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
+/* Ajuster le Swiper */
 .services-swiper {
-  /* Swiper container styles */
+  max-width: 100%;
   padding: 20px 0;
-  position: relative;
+  position: relative; /* Nécessaire pour positionner les boutons en dehors des cartes */
 }
 
-/* Navigation buttons styling */
+/* Afficher les boutons de navigation sur tous les écrans */
 .services-swiper .swiper-button-next,
 .services-swiper .swiper-button-prev {
-  color: #4caf50; /* Green color for navigation buttons */
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+/* Adapter la taille des boutons pour petits écrans */
+@media (max-width: 768px) {
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /* Pagination bullets styling */

@@ -1,65 +1,46 @@
-/* Footer */
-#Footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+.portfolio-footer {
+  background-color: #1a1a1a;
+  color: #fff;
   padding: 30px 0;
-  width: 100%;
-  position: relative;
-  bottom: 0;
   text-align: center;
-  z-index: 50;
-  backdrop-filter: blur(5px); /* Flou pour un effet moderne */
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
+.footer-content {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-container .footer-logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  transition: transform 0.3s ease, color 0.3s ease;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.footer-container .footer-logo:hover {
-  transform: scale(1.1);
-  color: #077b32;
+.social-links a {
+  color: #4caf50;
+  font-size: 24px;
+  transition: color 0.3s ease;
 }
 
-.footer-container .social-links a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: 0.3s ease;
+.social-links a:hover {
+  color: #81c784;
 }
 
-.footer-container .social-links a:hover {
-  color: #077b32;
-  transform: scale(1.2);
+.copyright {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
-.footer-container .footer-text {
-  font-size: 0.9rem;
-  color: #aaa;
-  text-align: center;
-  width: 100%;
-  margin-top: 15px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 600px) {
+  .social-links {
+    gap: 15px;
   }
-  .footer-text {
-    margin-top: 10px;
+
+  .social-links a {
+    font-size: 20px;
   }
 }

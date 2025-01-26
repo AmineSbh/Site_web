@@ -12,6 +12,8 @@ body {
   overflow: auto;
   background-color: black; /* Couleur de fond sombre */
   color: white; /* Texte clair */
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+  /* background-image: url("../assets/images/background_site.jpg"); */
 }
 
 a {
@@ -20,6 +22,15 @@ a {
 
 button {
   cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
+
+section {
+  scroll-margin-top: 80px; /* Ajustez selon la hauteur de votre navbar */
+  margin-bottom: 2%;
 }
 
 section {

@@ -1,11 +1,11 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "skills": "Skills",
-    "services": "Services",
-    "projects": "Projects",
-    "contact": "Contact"
+    "Home": "Home",
+    "About": "About",
+    "Skills": "Skills",
+    "Services": "Services",
+    "Projects": "Projects",
+    "Contact": "Contact"
   },
   "main": {
     "greeting": "Hey I'm",
