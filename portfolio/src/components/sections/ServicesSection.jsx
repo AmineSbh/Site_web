@@ -7,7 +7,7 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import "../css/services.css";
+import "../../css/services.css";
 
 function ServicesSection() {
   const { t } = useTranslation();

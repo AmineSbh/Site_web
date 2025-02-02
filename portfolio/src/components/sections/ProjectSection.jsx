@@ -7,7 +7,7 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../css/projects.css"; // Assurez-vous d'inclure les styles spécifiques
+import "../../css/projects.css"; // Assurez-vous d'inclure les styles spécifiques
 
 function ProjectSection() {
   const { t } = useTranslation(); // Utiliser le hook pour récupérer la fonction de traduction

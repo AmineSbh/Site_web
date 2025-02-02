@@ -1,0 +1,85 @@
+/* Services Section Styles */
+#Services {
+  background-color: rgba(35, 35, 35, 0.247);
+  height: 88vh;
+}
+
+/* Réduction du conteneur des cartes */
+.services-container {
+  max-width: 90%; /* Réduit la largeur */
+  overflow: hidden; /* Évite les scrolls horizontaux */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Ajuster le Swiper */
+.services-swiper {
+  max-width: 100%;
+  padding: 20px 0;
+  position: relative; /* Nécessaire pour positionner les boutons en dehors des cartes */
+}
+
+/* Afficher les boutons de navigation sur tous les écrans */
+.services-swiper .swiper-button-next,
+.services-swiper .swiper-button-prev {
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+/* Adapter la taille des boutons pour petits écrans */
+@media (max-width: 768px) {
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Pagination bullets styling */
+.services-swiper .swiper-pagination-bullet {
+  background-color: #4caf50;
+  opacity: 0.5;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #4caf50;
+}
+
+.service-card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  height: 100%; /* Ensure all cards have same height */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+
+.service-card:hover {
+  background-color: #4caf50;
+  transform: translateY(-10px);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: #fff;
+}

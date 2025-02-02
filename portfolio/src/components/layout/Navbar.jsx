@@ -1,36 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { useTheme } from '../hooks/useTheme';
+import { useScroll } from '../hooks/useScroll';
+import { useLanguage } from '../hooks/useLanguage';
 
 function Navbar() {
-  const { t, i18n } = useTranslation();
-  const [theme, setTheme] = useState('dark'); // Valeur par défaut
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
+  const isScrolled = useScroll();
+  const { language, handleLanguageChange } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour le menu hamburger
-
-  // Changement de langue
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
-  // Bascule entre les thèmes clair et sombre
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.body.classList.remove(theme === 'dark' ? 'dark-mode' : 'light-mode');
-    document.body.classList.add(newTheme === 'dark' ? 'dark-mode' : 'light-mode');
-  };
-
-  // Détecte le défilement
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Gère l'ouverture/fermeture du menu hamburger
   const toggleMenu = () => {
@@ -61,7 +41,7 @@ function Navbar() {
           <div className="language-selector">
             <select
               onChange={(e) => handleLanguageChange(e.target.value)}
-              value={i18n.language}
+              value={language}
             >
               <option value="fr">Fr</option>
               <option value="en">En</option>

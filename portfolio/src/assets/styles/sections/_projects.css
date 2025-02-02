@@ -1,0 +1,68 @@
+.projects-container {
+  padding: 20px;
+  text-align: center;
+  height: 88vh;
+}
+.projects-swiper {
+  margin-top: 20px;
+}
+
+.project-card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%; /* S'assure que la carte ne dépasse pas les limites de son conteneur */
+  max-width: 300px; /* Empêche la carte de devenir trop large */
+  margin: 0 auto; /* Centre la carte dans son conteneur */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background-color: #4caf50;
+}
+
+.project-card img {
+  width: 100%; /* L'image prend toute la largeur disponible */
+  max-width: 100%; /* Empêche l'image de dépasser les limites de la carte */
+  height: auto; /* Préserve le ratio de l'image */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-card button:hover {
+  background-color: #45a049;
+}
+
+.swiper-slide {
+  display: flex; /* Assure une disposition flexible */
+  justify-content: center; /* Centre la carte */
+  align-items: center; /* Aligne verticalement */
+}
+.projects-swiper {
+  width: 100%; /* Swiper occupe toute la largeur disponible */
+  max-width: 1200px; /* Limite la largeur maximale */
+  margin: 0 auto; /* Centre Swiper sur la page */
+}

@@ -1,29 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useLanguage } from './components/hooks/useLanguage'; // Import du hook useLanguage
 
 // Import des composants
-import Navbar from './components/Navbar';
-import MainSection from './components/MainSection';
-import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ServicesSection from './components/ServicesSection';
-import ProjectSection from './components/ProjectSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import ScrollToTopButton from './components/ScrollToTopButton';
+import AboutSection from './components/sections/AboutSection';
+import ContactSection from './components/sections/ContactSection';
+import Footer from './components/layout/Footer';
+import Navbar from './components/layout/Navbar';
+import MainSection from './components/sections/MainSection';
+import SkillsSection from './components/sections/SkillsSection';
+import ServicesSection from './components/sections/ServicesSection';
+import ProjectSection from './components/sections/ProjectSection';
+import ScrollToTopButton from './components/common/ScrollToTopButton';
 
 function App() {
-  const [language, setLanguage] = useState('fr'); // 'fr' comme langue par défaut
+  const { language, handleLanguageChange } = useLanguage(); // Utilisation du hook useLanguage
 
   useEffect(() => {
     AOS.init({ offset: 0 });
   }, []);
-
-  // Fonction pour changer la langue
-  const handleLanguageChange = (newLanguage) => {
-    setLanguage(newLanguage);
-  };
 
   return (
     <div>
