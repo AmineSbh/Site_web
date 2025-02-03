@@ -7,7 +7,7 @@ import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import "../../css/services.css";
+import Card from '../common/Card'; // Importez le composant Card
 
 function ServicesSection() {
   const { t } = useTranslation();
@@ -37,38 +37,43 @@ function ServicesSection() {
         >
 
           <SwiperSlide>
-            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
-              <h3>{t('services.tutoring.title')}</h3>
-              <p>{t('services.tutoring.description')}</p>
-            </div>
+            <Card
+              title={t('services.tutoring.title')}
+              description={t('services.tutoring.description')}
+              animationDelay="400"
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-              <h3>{t('services.webdev.title')}</h3>
-              <p>{t('services.webdev.description')}</p>
-            </div>
+            <Card
+              title={t('services.webdev.title')}
+              description={t('services.webdev.description')}
+              animationDelay="500"
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-              <h3>{t('services.bots.title')}</h3>
-              <p>{t('services.bots.description')}</p>
-            </div>
+            <Card
+              title={t('services.bots.title')}
+              description={t('services.bots.description')}
+              animationDelay="600"
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">
-              <h3>{t('services.scraping.title')}</h3>
-              <p>{t('services.scraping.description')}</p>
-            </div>
+            <Card
+              title={t('services.scraping.title')}
+              description={t('services.scraping.description')}
+              animationDelay="700"
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
-              <h3>{t('services.freelance.title')}</h3>
-              <p>{t('services.freelance.description')}</p>
-            </div>
+            <Card
+              title={t('services.freelance.title')}
+              description={t('services.freelance.description')}
+              animationDelay="800"
+            />
           </SwiperSlide>
         </Swiper>
       </div>

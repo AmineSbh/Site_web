@@ -7,7 +7,7 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../../css/projects.css"; // Assurez-vous d'inclure les styles spécifiques
+import Card from "../common/Card"; // Importez le composant Card
 
 function ProjectSection() {
   const { t } = useTranslation(); // Utiliser le hook pour récupérer la fonction de traduction
@@ -35,13 +35,12 @@ function ProjectSection() {
       description: t("projects.project3.description"),
       button: t("projects.project3.button"),
     },
-    
     {
       id: 4,
-      image: "project3.jpg",
-      title: t("projects.project3.title"),
-      description: t("projects.project3.description"),
-      button: t("projects.project3.button"),
+      image: "project4.jpg",
+      title: t("projects.project4.title"),
+      description: t("projects.project4.description"),
+      button: t("projects.project4.button"),
     },
   ];
 
@@ -64,25 +63,22 @@ function ProjectSection() {
             dynamicBullets: true, // Pagination dynamique
           }}
           breakpoints={{
-            768: { slidesPerView: 2 }, // À partir de 768px, montrer 2 slides
-            1024: { slidesPerView: 3 }, // À partir de 1024px, montrer 3 slides
+            480: { slidesPerView: 1 }, // 1 slide pour les petits écrans
+            768: { slidesPerView: 2 }, // 2 slides pour les tablettes
+            1024: { slidesPerView: 3 }, // 3 slides pour les grands écrans
           }}
           className="projects-swiper"
         >
           {/* Ajout des slides Swiper */}
           {projects.map((project, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="project-card"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                data-aos-delay={400 + index * 100} // Augmente le délai pour chaque projet
-              >
-                <img src={project.image} alt={project.title} />
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <button>{project.button}</button>
-              </div>
+            <SwiperSlide key={project.id}>
+              <Card
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                button={project.button}
+                animationDelay={400 + index * 100} // Augmente le délai pour chaque projet
+              />
             </SwiperSlide>
           ))}
         </Swiper>

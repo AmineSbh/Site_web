@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next'; // Importer le hook pour accéder aux traductions
-import "../../css/skills.css";
 import { FaPython, FaReact, FaGitAlt, FaJava, FaDatabase } from 'react-icons/fa'; // Utilisation d'icônes
 
 function SkillsSection() {

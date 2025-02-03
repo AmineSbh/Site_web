@@ -29,12 +29,35 @@ body.dark-mode nav {
 }
 
 /* card */
-body.dark-mode .project-card {
-  background-color: white;
+/* Mode clair et sombre pour les cartes */
+body.light-mode .project-card {
+  background-color: #fff; /* Fond clair pour les cartes */
+  color: #333; /* Texte sombre pour les cartes */
 }
 
-body.light-mode .project-card {
-  background-color: black;
+body.dark-mode .project-card {
+  background-color: #333; /* Fond sombre pour les cartes */
+  color: #fff; /* Texte clair pour les cartes */
+}
+
+/* Styles pour le bouton dans les cartes */
+body.light-mode .project-card button {
+  background-color: #4caf50; /* Couleur du bouton en mode clair */
+  color: white; /* Texte du bouton en mode clair */
+}
+
+body.dark-mode .project-card button {
+  background-color: #45a049; /* Couleur du bouton en mode sombre */
+  color: white; /* Texte du bouton en mode sombre */
+}
+
+/* Styles pour le survol des cartes */
+body.light-mode .project-card:hover {
+  background-color: #f0f0f0; /* Fond clair au survol */
+}
+
+body.dark-mode .project-card:hover {
+  background-color: #444; /* Fond sombre au survol */
 }
 
 /* Logo */
