@@ -13,9 +13,8 @@
     "intro": "Je suis ingénieur informatique spécialisé dans la data, l'IA et le développement d'applications.",
     "download": "Télécharger CV",
     "roles": {
-      "developer": "DÉVELOPPEUR",
-      "designer": "INGENIEUR DATA",
-      "youtuber": "ANALYSTE STATISTIQUE"
+      "data_engineer": "INGENIEUR DATA",
+      "developer": "DEVELOPEUR"
     }
   },
   "about": {

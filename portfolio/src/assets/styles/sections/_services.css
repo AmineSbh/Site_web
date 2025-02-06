@@ -1,85 +1,58 @@
-/* Services Section Styles */
-#Services {
-  background-color: rgba(35, 35, 35, 0.247);
-  height: 88vh;
-}
-
-/* Réduction du conteneur des cartes */
+/* Conteneur principal */
 .services-container {
-  max-width: 90%; /* Réduit la largeur */
-  overflow: hidden; /* Évite les scrolls horizontaux */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 2rem;
+  text-align: center;
 }
 
-/* Ajuster le Swiper */
-.services-swiper {
-  max-width: 100%;
-  padding: 20px 0;
-  position: relative; /* Nécessaire pour positionner les boutons en dehors des cartes */
+/* Liste des services */
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espacement entre les cartes */
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur petits écrans */
 }
 
-/* Afficher les boutons de navigation sur tous les écrans */
-.services-swiper .swiper-button-next,
-.services-swiper .swiper-button-prev {
-  display: block !important;
-  opacity: 1 !important;
-  z-index: 10;
-}
-
-/* Adapter la taille des boutons pour petits écrans */
-@media (max-width: 768px) {
-  .services-swiper .swiper-button-next,
-  .services-swiper .swiper-button-prev {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .services-swiper .swiper-button-next,
-  .services-swiper .swiper-button-prev {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/* Pagination bullets styling */
-.services-swiper .swiper-pagination-bullet {
-  background-color: #4caf50;
-  opacity: 0.5;
-}
-
-.services-swiper .swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #4caf50;
-}
-
+/* Style des cartes de service */
 .service-card {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  height: 100%; /* Ensure all cards have same height */
-}
-
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #077b32; /* Bordure néon verte */
+  box-shadow: 0 0 15px #077b32; /* Effet lumineux */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .service-card:hover {
-  background-color: #4caf50;
-  transform: translateY(-10px);
+  transform: translateY(-5px); /* Effet au survol */
 }
 
-.service-card:hover h3,
-.service-card:hover p {
-  color: #fff;
+/* Icône */
+.service-icon {
+  margin-bottom: 1rem;
+}
+
+/* Titre des services */
+.service-card h3 {
+  color: #077b32;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.service-card p {
+  color: #ddd;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-list {
+    flex-direction: column; /* Met les cartes en colonne */
+    align-items: center; /* Centre les cartes */
+  }
 }

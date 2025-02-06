@@ -13,9 +13,8 @@
     "intro": "I'm an IT engineer specialized in data, AI, and application development.",
     "download": "Download CV",
     "roles": {
-      "developer": "DEVELOPER",
-      "designer": "DESIGNER",
-      "youtuber": "YOUTUBER"
+      "data_engineer": "DATA ENGINEER",
+      "developer": "DEVELOPPER"
     }
   },
   "about": {

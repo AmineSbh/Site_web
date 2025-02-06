@@ -31,6 +31,7 @@ html {
 section {
   scroll-margin-top: 80px; /* Ajustez selon la hauteur de votre navbar */
   margin-bottom: 2%;
+  min-height: 88vh;
 }
 
 section {
@@ -39,11 +40,8 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80%;
-}
-/* Correction du z-index et des marges pour éviter que la navbar passe sur l'image */
-section {
   width: 100%;
+  min-height: 88vh;
 }
 
 /* titre h2 */

@@ -3,16 +3,15 @@ import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Card from "../common/Card"; // Importez le composant Card
+
+import Card from "../common/Card"; // On garde le composant Card
 
 function ProjectSection() {
-  const { t } = useTranslation(); // Utiliser le hook pour récupérer la fonction de traduction
+  const { t } = useTranslation();
 
-  // Liste des projets
   const projects = [
     {
       id: 1,
@@ -47,21 +46,19 @@ function ProjectSection() {
   return (
     <section id="Projects">
       <div className="projects-container">
-        {/* Titre de la section */}
         <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
           {t("projects.title")}
         </h2>
 
-        {/* Swiper pour la liste des projets */}
-        <Swiper
-          modules={[Navigation, Pagination, A11y]} // Modules nécessaires
-          spaceBetween={20} // Espacement entre les slides
-          slidesPerView={1} // Nombre de slides visibles
-          navigation // Boutons de navigation (précédent/suivant)
-          pagination={{
-            clickable: true, // Pagination cliquable
-            dynamicBullets: true, // Pagination dynamique
+        <Swiper 
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={20}
+          slidesPerView={1} // Par défaut, 1 slide visible
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
           }}
+          pagination={{ clickable: true, dynamicBullets: true }}
           breakpoints={{
             480: { slidesPerView: 1 }, // 1 slide pour les petits écrans
             768: { slidesPerView: 2 }, // 2 slides pour les tablettes
@@ -69,19 +66,23 @@ function ProjectSection() {
           }}
           className="projects-swiper"
         >
-          {/* Ajout des slides Swiper */}
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <Card
                 image={project.image}
                 title={project.title}
                 description={project.description}
-                button={project.button}
-                animationDelay={400 + index * 100} // Augmente le délai pour chaque projet
+                viewLink={project.viewLink}
+                codeLink={project.codeLink}
               />
             </SwiperSlide>
           ))}
+
+          {/* Boutons de navigation personnalisés */}
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
         </Swiper>
+
       </div>
     </section>
   );

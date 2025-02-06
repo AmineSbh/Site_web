@@ -9,9 +9,8 @@ function MainSection() {
 
   // Utilisation des textes traduits
   const texts = [
-    t('main.roles.developer'),
-    t('main.roles.designer'),
-    t('main.roles.youtuber')
+    t('main.roles.data_engineer'),
+    t('main.roles.developer')
   ];
 
   const speed = 100;

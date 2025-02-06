@@ -22,8 +22,11 @@ function Navbar() {
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
+          <a href="#Home" style={{ textDecoration: "none", color: "inherit" }}> 
           Amine <span>SABBAHI</span>
+          </a>
         </div>
+        
 
         {/* Liens de navigation */}
         <div className={`links ${isMenuOpen ? 'active' : ''}`}>
