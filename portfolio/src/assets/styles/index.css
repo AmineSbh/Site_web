@@ -1,5 +1,5 @@
 /* src/assets/styles/index.css */
-@import "./base/_globals.css";
+/* @import "./base/_globals.css";
 @import "./components/_buttons.css";
 @import "./components/_navbar.css";
 @import "./components/_social.css";
@@ -12,4 +12,6 @@
 @import "./sections/_projects.css";
 @import "./sections/_services.css";
 @import "./sections/_skills.css";
-@import "./themes/_light-dark-mode.css";
+@import "./themes/_light-dark-mode.css"; */
+
+@import "tailwindcss";
