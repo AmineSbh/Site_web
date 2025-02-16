@@ -10,7 +10,7 @@ function MainSection() {
   // Utilisation des textes traduits
   const texts = [
     t('main.roles.data_engineer'),
-    t('main.roles.developer')
+    t('main.roles.developer'),
   ];
 
   const speed = 100;
@@ -48,25 +48,63 @@ function MainSection() {
   }, [charIndex, textIndex, isErasing]);
 
   return (
-    <section id="Home">
-      <div className="main-container">
-        <div className="image" data-aos="zoom-out" data-aos-duration="3000">
-          <img src="src/assets/images/photo_linkdin.jpeg" alt=""/>
+    <section id="Home" className="w-full h-[88vh] flex justify-evenly items-center mt-[12vh]">
+      {/* Image */}
+      <div
+        className="relative w-[400px] h-[65vh] rounded-full overflow-hidden shadow-2xl shadow-green-600 transform-gpu hover:animate-pulse"
+        data-aos="zoom-out"
+        data-aos-duration="3000"
+      >
+        <img
+          src="src/assets/images/photo_linkdin.jpeg"
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      {/* Contenu */}
+      <div className="w-[40%] min-h-[100px]">
+        <h1
+          className="text-5xl font-bold"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="700"
+        >
+          {t('main.greeting')} <span className="text-green-600 text-shadow-lg shadow-green-600">Amine</span>
+        </h1>
+
+        {/* Typewriter Effect */}
+        <div
+          className="text-4xl font-semibold mt-4"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="900"
+        >
+          {t('main.iam')}{' '}
+          <span className="text-green-600 text-shadow-lg shadow-green-600">
+            {texts[textIndex].substring(0, charIndex)}
+          </span>
+          <label className="animate-blink">|</label>
         </div>
-        <div className="content">
-          <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">
-            {t('main.greeting')} <span>Amine</span>
-          </h1>
-          <div className="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-            {t('main.iam')} <span className="typewriter-text">{texts[textIndex].substring(0, charIndex)}</span><label>|</label>
-          </div>
-          <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
-            {t('main.intro')}
-          </p>
-          <button className="custom-btn" data-aos="fade-right" data-aos-duration="1500" >
-            {t('main.download')}
-          </button>
-        </div>
+
+        {/* Description */}
+        <p
+          className="text-lg mt-4"
+          data-aos="flip-down"
+          data-aos-duration="1500"
+          data-aos-delay="1100"
+        >
+          {t('main.intro')}
+        </p>
+
+        {/* Bouton de téléchargement */}
+        <button
+          className="mt-6 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          {t('main.download')}
+        </button>
       </div>
     </section>
   );

@@ -44,19 +44,24 @@ function ProjectSection() {
   ];
 
   return (
-    <section id="Projects">
-      <div className="projects-container">
-        <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+    <section id="Projects" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4 text-center">
+        <h2
+          className="text-4xl font-bold text-white mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
           {t("projects.title")}
         </h2>
 
-        <Swiper 
+        <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={20}
           slidesPerView={1} // Par défaut, 1 slide visible
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           pagination={{ clickable: true, dynamicBullets: true }}
           breakpoints={{
@@ -64,7 +69,7 @@ function ProjectSection() {
             768: { slidesPerView: 2 }, // 2 slides pour les tablettes
             1024: { slidesPerView: 3 }, // 3 slides pour les grands écrans
           }}
-          className="projects-swiper"
+          className="w-full relative"
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
@@ -79,10 +84,13 @@ function ProjectSection() {
           ))}
 
           {/* Boutons de navigation personnalisés */}
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev bg-black/70 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/80 transition-colors">
+            <span className="text-white text-2xl">&#8249;</span>
+          </div>
+          <div className="swiper-button-next bg-black/70 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/80 transition-colors">
+            <span className="text-white text-2xl">&#8250;</span>
+          </div>
         </Swiper>
-
       </div>
     </section>
   );

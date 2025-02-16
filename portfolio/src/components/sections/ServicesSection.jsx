@@ -1,7 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-
-// Icônes (exemple avec FontAwesome, tu peux mettre des images à la place)
 import { FaLaptopCode, FaRobot, FaGlobe } from 'react-icons/fa';
 
 function ServicesSection() {
@@ -30,18 +28,31 @@ function ServicesSection() {
   ];
 
   return (
-    <section id="Services">
-      <div className="services-container">
-        <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+    <section id="Services" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4 text-center">
+        <h2
+          className="text-4xl font-bold text-white mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
           {t('services.title')}
         </h2>
-        
-        <div className="services-list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+
+        <div
+          className="flex flex-wrap justify-center gap-8"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
           {services.map((service) => (
-            <div className="service-card" key={service.id}>
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+            <div
+              key={service.id}
+              className="service-card bg-gray-800 border-2 border-green-600 shadow-lg shadow-green-600/50 p-8 rounded-lg text-center w-80 transition-transform hover:-translate-y-2"
+            >
+              <div className="service-icon mb-6">{service.icon}</div>
+              <h3 className="text-2xl font-bold text-green-600 mb-4">{service.title}</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
