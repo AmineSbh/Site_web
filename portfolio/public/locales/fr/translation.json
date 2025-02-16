@@ -13,20 +13,27 @@
     "intro": "Je suis ingénieur informatique spécialisé dans la data, l'IA et le développement d'applications.",
     "download": "Télécharger CV",
     "roles": {
-      "data_engineer": "INGENIEUR DATA",
-      "developer": "DEVELOPEUR"
+      "data_engineer": "INGÉNIEUR DATA",
+      "developer": "DÉVELOPPEUR"
     }
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je suis Amine SABBAHI, 26 ans et récemment diplômé de l'ESIEA, une école d'ingénieurs spécialisée dans le numérique. Curieux et passionné par le développement web et les nouvelles technologies, j'adore explorer les dernières tendances et repousser les limites du possible. Mon parcours m'a appris à être rigoureux et persévérant, mais aussi à apprécier le travail d'équipe et les moments de partage."
+    "description": "Je suis Amine SABBAHI, 26 ans et récemment diplômé de l'ESIEA, une école d'ingénieurs spécialisée dans le numérique. Curieux et passionné par la data et les nouvelles technologies, j'adore explorer les dernières tendances et repousser les limites du possible. Mon parcours m'a appris à être rigoureux et persévérant, mais aussi à apprécier le travail d'équipe et les moments de partage."
   },
   "skills": {
-    "title": "Mes compétences",
+    "title": "Mes Compétences",
     "categories": {
-      "programming": "Langages de programmation",
-      "technologies": "Technologies",
-      "ml": "Apprentissage automatique & Data Science"
+      "programming": "Langages de Programmation",
+      "certifications": "Certifications",
+      "development": "developpement",
+      "ml": "Machine Learning & Data Science"
+    },
+    "levels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "expert": "Expert"
     }
   },
   "services": {
@@ -59,17 +66,6 @@
       "email": "Email",
       "message": "Message",
       "submit": "Envoyer le message"
-    }
-  },
-  "projects": {
-    "title": "Mes Projets",
-    "project1": {
-      "title": "Projet 1",
-      "description": "Description du projet 1."
-    },
-    "project2": {
-      "title": "Projet 2",
-      "description": "Description du projet 2."
     }
   },
   "footer": {

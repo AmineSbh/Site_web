@@ -14,19 +14,26 @@
     "download": "Download CV",
     "roles": {
       "data_engineer": "DATA ENGINEER",
-      "developer": "DEVELOPPER"
+      "developer": "DEVELOPER"
     }
   },
   "about": {
     "title": "About Me",
-    "description": "I'm Amine SABBAHI, 26 years old and recently graduated from ESIEA, an engineering school specialized in digital technology. Curious and passionate about web development and new technologies, I love exploring the latest trends and pushing the boundaries of what's possible. My journey has taught me to be rigorous and persevering, but also to appreciate teamwork and moments of sharing."
+    "description": "I'm Amine SABBAHI, 26 years old and recently graduated from ESIEA, an engineering school specialized in digital technology. Curious and passionate about data and new technologies, I love exploring the latest trends and pushing the boundaries of what's possible. My journey has taught me to be rigorous and persevering, but also to appreciate teamwork and moments of sharing."
   },
   "skills": {
     "title": "My Skills",
     "categories": {
       "programming": "Programming Languages",
-      "technologies": "Technologies",
+      "certifications": "Certifications",
+      "development": "development",
       "ml": "Machine Learning & Data Science"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
     }
   },
   "services": {
@@ -61,26 +68,15 @@
       "submit": "Send Message"
     }
   },
-  "projects": {
-    "title": "Mes Projets",
-    "project1": {
-      "title": "Projet 1",
-      "description": "Description du projet 1."
-    },
-    "project2": {
-      "title": "Projet 2",
-      "description": "Description du projet 2."
-    }
-  },
   "footer": {
-    "title": "Contactez-moi",
-    "contactInfo": "Vous pouvez me contacter via email ou téléphone.",
-    "address": "123 Rue de la Technologie, Paris, France",
-    "social": "Réseaux sociaux",
+    "title": "Contact Me",
+    "contactInfo": "You can contact me via email or phone.",
+    "address": "123 Technology Street, Paris, France",
+    "social": "Social Media",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "twitter": "Twitter",
     "copyright": "Copyright",
-    "copyrightText": "© 2025 Tous droits réservés"
+    "copyrightText": "© 2025 All rights reserved"
   }
 }
