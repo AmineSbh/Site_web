@@ -27,6 +27,17 @@ body.dark-mode nav {
   background-color: rgba(0, 0, 0, 0.7); /* Transparence légère */
   backdrop-filter: blur(10px); /* Flou pour ce qui est derrière la navbar */
 }
+body.light-mode .navbar .links {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Liens en noir pour le mode clair */
+}
+body.dark-mode .navbar .links {
+  background-color: rgba(0, 0, 0, 0.9); /* Liens en noir pour le mode clair */
+}
 
 /* card */
 /* Mode clair et sombre pour les cartes */

@@ -20,7 +20,6 @@
   background-color: rgba(0, 0, 0, 0.7); /* Transparence légère */
   backdrop-filter: blur(10px); /* Flou pour ce qui est derrière la navbar */
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -104,6 +103,9 @@
 }
 
 @media (max-width: 884px) {
+  .navbar {
+    height: 8vh;
+  }
   .hamburg {
     display: block;
   }
@@ -114,7 +116,7 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
-    top: 10vh;
+    top: 8vh;
     width: 100%;
     z-index: 100;
   }

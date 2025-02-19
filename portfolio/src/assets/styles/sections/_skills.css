@@ -12,6 +12,7 @@
   gap: 20px; /* Espace entre les catégories */
   flex-wrap: wrap; /* Permet aux catégories de se replier sur plusieurs lignes si nécessaire */
   margin-top: 40px; /* Espace entre le titre et le contenu */
+  margin-inline: 40px;
 }
 
 .skills-category {
@@ -110,6 +111,7 @@
   .skills-category {
     width: 90%; /* Les catégories occupent 90% de la largeur */
     margin-inline: 0; /* Supprime les marges latérales */
+    margin-top: 30px;
   }
 
   .skill p {
