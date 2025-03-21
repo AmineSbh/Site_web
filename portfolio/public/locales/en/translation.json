@@ -59,6 +59,25 @@
       "description": "Consulting in data analysis and solution development."
     }
   },
+  "projects": {
+    "title": "Projects",
+    "language_app": {
+      "title": "Language Learning App",
+      "description": "An application leveraging Large Language Models (LLMs) to assist users in learning and practicing new languages."
+    },
+    "pdf_reader": {
+      "title": "Smart PDF Reader",
+      "description": "A tool that uses AI to extract, summarize, and analyze content from PDF documents."
+    },
+    "commitment_tracker": {
+      "title": "Commitment Tracker",
+      "description": "An app designed to help users set, track, and achieve their personal and professional goals."
+    },
+    "interview_prep": {
+      "title": "Interview Preparation Tool",
+      "description": "A platform offering a collection of riddles, puzzles, and common interview questions."
+    }
+  },
   "contact": {
     "title": "Contact Me",
     "form": {

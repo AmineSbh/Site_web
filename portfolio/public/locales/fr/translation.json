@@ -59,6 +59,25 @@
       "description": "Consultation en analyse de données et développement de solutions."
     }
   },
+  "projects": {
+    "title": "Projets",
+    "language_app": {
+      "title": "Application d'apprentissage des langues",
+      "description": "Une application utilisant des modèles de langage (LLM) pour aider les utilisateurs à apprendre et pratiquer de nouvelles langues."
+    },
+    "pdf_reader": {
+      "title": "Lecteur de PDF intelligent",
+      "description": "Un outil utilisant l'IA pour extraire, résumer et analyser le contenu des documents PDF."
+    },
+    "commitment_tracker": {
+      "title": "Suivi des engagements",
+      "description": "Une application conçue pour aider les utilisateurs à définir, suivre et atteindre leurs objectifs personnels et professionnels."
+    },
+    "interview_prep": {
+      "title": "Outil de préparation aux entretiens",
+      "description": "Une plateforme offrant une collection d'énigmes, de puzzles et de questions courantes d'entretien pour aider les utilisateurs à se préparer aux entretiens techniques."
+    }
+  },
   "contact": {
     "title": "Contactez-moi",
     "form": {

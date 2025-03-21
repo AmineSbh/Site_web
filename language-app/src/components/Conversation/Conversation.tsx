@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { startConversationWithText } from '../../services/apiService';
+import { startConversationWithText } from '../services/apiService';
 import Button from '../common/Button';
 import './Conversation.css';
 

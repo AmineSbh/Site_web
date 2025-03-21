@@ -25,7 +25,7 @@ function Footer() {
           </a>
         </div>
         <p className="copyright">
-          © {new Date().getFullYear()} Votre Nom. Tous droits réservés.
+          © {new Date().getFullYear()} Amine SABBAHI. Tous droits réservés.
         </p>
       </div>
     </footer>

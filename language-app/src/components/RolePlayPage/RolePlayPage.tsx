@@ -1,8 +1,8 @@
 import React, { useEffect, useCallback, useState } from 'react';
-import { startConversationWithAudio } from '../../services/apiService';
-import { useSpeechRecognition } from '../../hooks/useSpeechRecognition';
-import { useAudioManager } from '../../hooks/useAudioManager';
-import { saveAudioLocally, initializeMicrophone } from '../../services/audioService';
+import { startConversationWithAudio } from '../services/apiService';
+import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
+import { useAudioManager } from '../hooks/useAudioManager';
+import { saveAudioLocally, initializeMicrophone } from '../services/audioService';
 import SpeechWave from './SpeechWave';
 import ControlButtons from './ControlButtons';
 import './RolePlayPage.css';

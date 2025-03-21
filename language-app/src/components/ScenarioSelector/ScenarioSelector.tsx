@@ -1,6 +1,6 @@
 import React, { JSX, useState } from "react";
 import { FaShoppingCart, FaUtensils, FaTrain } from "react-icons/fa";
-import { startConversationWithText } from "../../services/apiService";
+import { startConversationWithText } from "../services/apiService";
 import RolePlayPage from "../RolePlayPage/RolePlayPage";
 import Button from "../common/Button";
 import Icon from "../common/Icon";

@@ -5,7 +5,7 @@
   box-shadow: 0 0.7rem 1rem rgba(0, 255, 0, 0.3);
   overflow: hidden;
   height: auto; /* Hauteur automatique */
-  min-height: 300px; /* Hauteur minimale */
+  min-height: 280px; /* Hauteur minimale légèrement réduite */
   background: #111;
   border: 2px solid #077b32;
   transition: transform 0.3s ease;
@@ -14,7 +14,7 @@
 }
 
 .box img {
-  height: 200px; /* Hauteur fixe pour l'image */
+  height: 180px; /* Hauteur fixe pour l'image légèrement réduite */
   width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -40,26 +40,26 @@
 /* Titres et descriptions */
 .tag {
   background: #077b32;
-  padding: 0.8rem;
+  padding: 0.6rem; /* Padding réduit */
   text-align: center;
 }
 
 .tag h3 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem; /* Taille du titre réduite */
   color: #000;
 }
 
 .desc {
-  padding: 1.5rem;
+  padding: 1rem; /* Padding réduit */
   flex-grow: 1;
 }
 
 .desc p {
-  font-size: 1.2rem;
+  font-size: 0.8rem; /* Taille de la description réduite */
   line-height: 1.4;
   color: #ddd;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Marge réduite */
 }
 
 /* Boutons */
@@ -72,9 +72,9 @@
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem; /* Padding réduit */
   border-radius: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Taille du texte réduite */
   color: #000;
   background: #077b32;
   text-decoration: none;
@@ -86,14 +86,15 @@
   background: #008f00;
   transform: translateY(-2px);
 }
+
 /* Ajustements pour les petits écrans */
 @media (max-width: 768px) {
   .box {
-    min-height: 250px; /* Réduire la hauteur minimale */
+    min-height: 240px; /* Hauteur minimale réduite */
   }
 
   .box img {
-    height: 150px; /* Réduire la hauteur de l'image */
+    height: 130px; /* Hauteur de l'image réduite */
   }
 
   .content-card {
@@ -105,15 +106,15 @@
   }
 
   .tag h3 {
-    font-size: 1.4rem; /* Réduire la taille du titre */
+    font-size: 1.2rem; /* Taille du titre réduite */
   }
 
   .desc p {
-    font-size: 1rem; /* Réduire la taille de la description */
+    font-size: 0.9rem; /* Taille de la description réduite */
   }
 
   .btn {
-    padding: 0.6rem 1rem; /* Réduire la taille des boutons */
-    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Taille des boutons réduite */
+    font-size: 0.9rem; /* Taille du texte réduite */
   }
 }
