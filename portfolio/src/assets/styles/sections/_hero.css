@@ -9,6 +9,7 @@
   margin-top: 12vh; /* Ajuste l'espace sous la navbar */
   padding: 20px; /* Ajoute du padding pour éviter le débordement */
   text-align: center; /* Centrage du texte pour un meilleur rendu */
+  gap: 80px; /* Ajoute un espace entre les éléments enfants */
 }
 
 /* Conteneur image */

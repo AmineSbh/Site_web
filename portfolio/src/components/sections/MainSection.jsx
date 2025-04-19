@@ -63,9 +63,20 @@ function MainSection() {
           <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
             {t('main.intro')}
           </p>
-          <button className="custom-btn" data-aos="fade-right" data-aos-duration="1500" >
-            {t('main.download')}
-          </button>
+          <a
+            href="/cv_a_jour_bpi.pdf"
+            download
+            style={{ textDecoration: "none" }} // pour éviter le soulignement du lien
+          >
+            <button
+              className="custom-btn"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
+              {t('main.download')}
+            </button>
+          </a>
+
         </div>
       </div>
     </section>

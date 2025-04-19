@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { FaSun, FaMoon } from 'react-icons/fa';
+// Imports des hooks et composants nécessaires
+import { useState } from 'react'; // Hook pour gérer l'état
+import { useTranslation } from 'react-i18next'; // Hook pour la traduction
+import { FaSun, FaMoon } from 'react-icons/fa'; // Icônes pour le thème
+
+// Hooks personnalisés
 import { useTheme } from '../hooks/useTheme';
 import { useScroll } from '../hooks/useScroll';
 import { useLanguage } from '../hooks/useLanguage';
 
 function Navbar() {
-  const { t } = useTranslation();
-  const { theme, toggleTheme } = useTheme();
-  const isScrolled = useScroll();
-  const { language, handleLanguageChange } = useLanguage();
+  // Initialisation des hooks
+  const { t } = useTranslation(); // Pour la traduction
+  const { theme, toggleTheme } = useTheme(); // Gestion du thème
+  const isScrolled = useScroll(); // Détection du scroll
+  const { language, handleLanguageChange } = useLanguage(); // Gestion de la langue
   const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour le menu hamburger
 
   // Gère l'ouverture/fermeture du menu hamburger
@@ -42,13 +46,14 @@ function Navbar() {
         {/* Contrôles de langue et thème */}
         <div className="controls">
           <div className="language-selector">
-            <select
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              value={language}
-            >
-              <option value="fr">Fr</option>
-              <option value="en">En</option>
-            </select>
+          <select
+            onChange={(e) => handleLanguageChange(e.target.value)}
+            value={language}
+            className="language-select"
+          >
+            <option value="fr">🇫🇷 Français</option>
+            <option value="en">🇬🇧 English</option>
+          </select>
           </div>
 
           <div onClick={toggleTheme} className="theme-toggle">

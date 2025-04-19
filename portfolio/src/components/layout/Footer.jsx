@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { 
   FaGithub, 
   FaLinkedin, 
@@ -14,7 +14,7 @@ function Footer() {
           <a href="https://github.com/votrenom" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/votrenom" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/amine-sabbahi-a64036207/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
           <a href="https://twitter.com/votrenom" target="_blank" rel="noopener noreferrer">

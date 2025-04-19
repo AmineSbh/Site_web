@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useTranslation } from 'react-i18next'; // Import du hook de traduction
 
 function AboutSection() {
@@ -27,7 +27,7 @@ function AboutSection() {
             {/* Liens sociaux */}
             <div className="social-links">
               <a 
-                href="https://github.com/" 
+                href="https://github.com/AmineSbh" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 data-aos="fade-up" 
@@ -47,7 +47,7 @@ function AboutSection() {
                 <i className="fa-brands fa-facebook"></i>
               </a>
               <a 
-                href="https://linkedin.com/" 
+                href="https://www.linkedin.com/in/amine-sabbahi-a64036207/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 data-aos="fade-up" 

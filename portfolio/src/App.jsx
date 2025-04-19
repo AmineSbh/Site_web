@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react'; 
+// useEffect est un "Hook" React qui permet d'exécuter du code à des moments précis
+
 import AOS from 'aos';
+// AOS (Animate On Scroll) est une bibliothèque pour créer des animations au défilement
+
 import 'aos/dist/aos.css';
-import { useLanguage } from './components/hooks/useLanguage'; // Import du hook useLanguage
+import { useLanguage } from './components/hooks/useLanguage'; 
+// Import d'un hook personnalisé pour gérer les langues
 
 // Import des composants
 import AboutSection from './components/sections/AboutSection';
@@ -15,8 +20,10 @@ import ProjectSection from './components/sections/ProjectSection';
 import ScrollToTopButton from './components/common/ScrollToTopButton';
 
 function App() {
-  const { language, handleLanguageChange } = useLanguage(); // Utilisation du hook useLanguage
+  // Récupère la langue actuelle et la fonction pour la changer
+  const { language, handleLanguageChange } = useLanguage(); 
 
+  // Configure AOS au chargement de l'application
   useEffect(() => {
     AOS.init({ offset: 0 });
   }, []);
