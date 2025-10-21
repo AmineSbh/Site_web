@@ -64,7 +64,7 @@ function MainSection() {
             {t('main.intro')}
           </p>
           <a
-            href="/cv_a_jour_bpi.pdf"
+            href="images/cv_a_jour_bpi.pdf"
             download
             style={{ textDecoration: "none" }} // pour éviter le soulignement du lien
           >

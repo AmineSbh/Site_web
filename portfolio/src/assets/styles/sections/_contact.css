@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(35, 35, 35, 0.247);
 }
 
 .contact-container {

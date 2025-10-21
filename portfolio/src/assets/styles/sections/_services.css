@@ -1,4 +1,8 @@
 /* Conteneur principal */
+#Services {
+  background-color: rgba(35, 35, 35, 0.247);
+}
+
 .services-container {
   max-width: 1200px;
   margin: 0 auto;

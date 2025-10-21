@@ -84,7 +84,8 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "success": "Message successfully sent!"
     }
   },
   "footer": {
