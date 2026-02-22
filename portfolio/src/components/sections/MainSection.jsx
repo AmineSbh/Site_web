@@ -51,7 +51,7 @@ function MainSection() {
     <section id="Home">
       <div className="main-container">
         <div className="image" data-aos="zoom-out" data-aos-duration="3000">
-          <img src="src/assets/images/photo_linkdin.jpeg" alt=""/>
+          <img src="images/photo_linkdin.jpeg" alt="Photo de profil d'Amine SABBAHI" />
         </div>
         <div className="content">
           <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">

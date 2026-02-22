@@ -85,7 +85,9 @@
       "email": "Email",
       "message": "Message",
       "submit": "Envoyer le message",
-      "success": "Message envoyé avec succès !"
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
     }
   },
   "footer": {

@@ -32,19 +32,15 @@ html {
 }
 
 section {
-  scroll-margin-top: 80px; /* Ajustez selon la hauteur de votre navbar */
+  scroll-margin-top: 80px;
   margin-bottom: 2%;
   min-height: 88vh;
-}
-
-section {
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  min-height: 88vh;
 }
 
 /* titre h2 */

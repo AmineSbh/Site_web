@@ -17,10 +17,10 @@ const ContactSection = () => {
     e.preventDefault(); // Empêche la page de se recharger
     setLoading(true);
     
-    // --- 2. Mettez vos 3 clés EmailJS ici ---
-    const SERVICE_ID = 'service_s96adwd';
-    const TEMPLATE_ID = 'template_0l458he';
-    const PUBLIC_KEY = 'PVmZPAGKxFpETvc4E'; // (Se trouve dans Account > API Keys)
+    // Utilisation des variables d'environnement pour la sécurité
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
       // 3. Utiliser emailjs.sendForm

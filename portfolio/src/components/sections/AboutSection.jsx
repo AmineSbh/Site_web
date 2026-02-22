@@ -1,5 +1,4 @@
-// import React from 'react';
-import { useTranslation } from 'react-i18next'; // Import du hook de traduction
+import { useTranslation } from 'react-i18next';
 
 function AboutSection() {
   const { t } = useTranslation(); // Hook pour accéder aux traductions
@@ -15,7 +14,7 @@ function AboutSection() {
         <div className="about-container">
           {/* Image */}
           <div className="image" data-aos="zoom-out" data-aos-duration="200">
-            <img src="src/assets/images/photo_linkdin.jpeg" alt={t('about.imageAlt', 'About Image')} />
+            <img src="images/photo_linkdin.jpeg" alt={t('about.imageAlt', 'About Image')} />
           </div>
 
           {/* Contenu */}

@@ -85,7 +85,9 @@
       "email": "Email",
       "message": "Message",
       "submit": "Send Message",
-      "success": "Message successfully sent!"
+      "submitting": "Sending...",
+      "success": "Message successfully sent!",
+      "error": "Error sending message. Please try again."
     }
   },
   "footer": {
