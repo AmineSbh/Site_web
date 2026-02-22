@@ -1,9 +1,12 @@
 #Skills {
-  text-align: center; /* Centrer le texte */
-  display: block; /* Assurer que la section occupe toute la largeur disponible */
-  margin-top: 20px; /* Espacement au-dessus de la section */
-  padding: 20px; /* Espacement à l'intérieur de la section */
-  height: 88vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 40px 20px;
+  min-height: 88vh;
+  height: auto;
 }
 
 .skills-container {

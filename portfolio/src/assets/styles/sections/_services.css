@@ -1,6 +1,13 @@
 /* Conteneur principal */
 #Services {
   background-color: rgba(35, 35, 35, 0.247);
+  min-height: 88vh;
+  height: auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .services-container {
@@ -55,8 +62,37 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  #Services {
+    padding: 40px 15px;
+  }
+
   .services-list {
-    flex-direction: column; /* Met les cartes en colonne */
-    align-items: center; /* Centre les cartes */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Services {
+    padding: 30px 10px;
+  }
+
+  .service-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
   }
 }
