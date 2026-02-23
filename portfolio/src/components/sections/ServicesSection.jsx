@@ -1,17 +1,13 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-
-// Icônes (exemple avec FontAwesome, tu peux mettre des images à la place)
-import { FaLaptopCode, FaRobot, FaGlobe } from 'react-icons/fa';
+import { FaDatabase, FaRobot, FaCloud } from 'react-icons/fa';
 
 function ServicesSection() {
   const { t } = useTranslation();
 
-  // Liste des services
   const services = [
     {
       id: 1,
-      icon: <FaLaptopCode size={50} color="#077b32" />, // Icône verte
+      icon: <FaDatabase size={50} color="#077b32" />,
       title: t('services.webdev.title'),
       description: t('services.webdev.description'),
     },
@@ -23,7 +19,7 @@ function ServicesSection() {
     },
     {
       id: 3,
-      icon: <FaGlobe size={50} color="#077b32" />,
+      icon: <FaCloud size={50} color="#077b32" />,
       title: t('services.scraping.title'),
       description: t('services.scraping.description'),
     },
@@ -35,7 +31,7 @@ function ServicesSection() {
         <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
           {t('services.title')}
         </h2>
-        
+
         <div className="services-list" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
           {services.map((service) => (
             <div className="service-card" key={service.id}>

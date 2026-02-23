@@ -61,7 +61,7 @@ function ProjectSection() {
 
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={20}
+          spaceBetween={15}
           slidesPerView={1}
           navigation={{
             nextEl: '.swiper-button-next',
@@ -71,7 +71,7 @@ function ProjectSection() {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
-            reverseDirection: true, // Défilement de droite à gauche
+            reverseDirection: false, // Défilement de droite à gauche
           }}
           loop={true}
           breakpoints={{

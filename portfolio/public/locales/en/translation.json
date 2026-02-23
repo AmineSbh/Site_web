@@ -8,26 +8,26 @@
     "Contact": "Contact"
   },
   "main": {
-    "greeting": "Hey I'm",
+    "greeting": "Hi, I'm",
     "iam": "I'm a",
-    "intro": "I'm an IT engineer specialized in data, AI, and application development.",
+    "intro": "Data Engineer with 3 years of experience, expert in Python, PySpark and AWS. I transform raw data into strategic solutions.",
     "download": "Download CV",
     "roles": {
       "data_engineer": "DATA ENGINEER",
-      "developer": "DEVELOPER"
+      "developer": "AI & BIG DATA EXPERT"
     }
   },
   "about": {
     "title": "About Me",
-    "description": "I'm Amine SABBAHI, 26 years old and recently graduated from ESIEA, an engineering school specialized in digital technology. Curious and passionate about data and new technologies, I love exploring the latest trends and pushing the boundaries of what's possible. My journey has taught me to be rigorous and persevering, but also to appreciate teamwork and moments of sharing."
+    "description": "I'm Amine SABBAHI, a Senior Data Engineer with 3 years of experience at BPIFrance and La Poste. Expert in Python, PySpark and AWS, I specialize in Big Data pipeline design, software industrialization (CI/CD) and modern AI architectures (RAG, LangChain). Graduate from ESIEA in Data & AI with an exchange at the University of Michigan, I combine technical rigor and strategic vision to transform data into business value."
   },
   "skills": {
     "title": "My Skills",
     "categories": {
-      "programming": "Programming Languages",
-      "certifications": "Certifications",
-      "development": "development",
-      "ml": "Machine Learning & Data Science"
+      "programming": "Data Engineering",
+      "certifications": "Cloud & DevOps",
+      "development": "AI & Modern Stack",
+      "ml": "Certifications"
     },
     "levels": {
       "beginner": "Beginner",
@@ -38,44 +38,36 @@
   },
   "services": {
     "title": "Services",
-    "tutoring": {
-      "title": "Tutoring",
-      "description": "Assistance for school and university homework."
-    },
     "webdev": {
-      "title": "Web & Mobile Development",
-      "description": "Creation of custom websites and mobile applications."
+      "title": "Data Pipelines & ETL",
+      "description": "Design and optimization of distributed PySpark/Polars pipelines for massive data processing (Big Data)."
     },
     "bots": {
-      "title": "Bot Development",
-      "description": "Creation of WhatsApp, Telegram, and Discord bots."
+      "title": "AI Solutions & RAG",
+      "description": "Development of intelligent assistants based on LangChain, vector databases and RAG architectures."
     },
     "scraping": {
-      "title": "Web Scraping",
-      "description": "Data collection from websites for analysis."
-    },
-    "freelance": {
-      "title": "Data Analysis & Development",
-      "description": "Consulting in data analysis and solution development."
+      "title": "Cloud & Industrialization",
+      "description": "Production deployment via CI/CD (GitHub Actions), AWS deployment and Docker containerization."
     }
   },
   "projects": {
-    "title": "Projects",
+    "title": "R&D Projects",
     "language_app": {
-      "title": "Language Learning App",
-      "description": "An application leveraging Large Language Models (LLMs) to assist users in learning and practicing new languages."
+      "title": "RAG Document Assistant",
+      "description": "RAG architecture based on LangChain and Supabase (Vector DB) for technical documentation querying. Hybrid Search, Re-ranking and Docker deployment."
     },
     "pdf_reader": {
-      "title": "Smart PDF Reader",
-      "description": "A tool that uses AI to extract, summarize, and analyze content from PDF documents."
+      "title": "Multi-Agent System",
+      "description": "Multi-agent system orchestrating autonomous workflows via OpenAI API. Full containerization with Docker."
     },
     "commitment_tracker": {
-      "title": "Commitment Tracker",
-      "description": "An app designed to help users set, track, and achieve their personal and professional goals."
+      "title": "Actuarial Pipelines",
+      "description": "Internal Python libraries for AWS S3 data ingestion and actuarial calculations industrialization (Markov Chains, Chain Ladder)."
     },
     "interview_prep": {
-      "title": "Interview Preparation Tool",
-      "description": "A platform offering a collection of riddles, puzzles, and common interview questions."
+      "title": "Analytics Dashboards",
+      "description": "Dash/Plotly applications for data visualization and strategic decision-making in enterprise."
     }
   },
   "contact": {
@@ -92,8 +84,8 @@
   },
   "footer": {
     "title": "Contact Me",
-    "contactInfo": "You can contact me via email or phone.",
-    "address": "123 Technology Street, Paris, France",
+    "contactInfo": "Available for freelance missions and permanent positions.",
+    "address": "Paris Area, France",
     "social": "Social Media",
     "github": "GitHub",
     "linkedin": "LinkedIn",

@@ -8,26 +8,26 @@
     "Contact": "Contact"
   },
   "main": {
-    "greeting": "Salut, je suis",
+    "greeting": "Bonjour, je suis",
     "iam": "Je suis",
-    "intro": "Je suis ingénieur informatique spécialisé dans la data, l'IA et le développement d'applications.",
+    "intro": "Data Engineer avec 3 ans d'expérience, expert Python, PySpark et AWS. Je transforme les données brutes en solutions stratégiques.",
     "download": "Télécharger CV",
     "roles": {
-      "data_engineer": "INGÉNIEUR DATA",
-      "developer": "DÉVELOPPEUR"
+      "data_engineer": "DATA ENGINEER",
+      "developer": "EXPERT IA & BIG DATA"
     }
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je suis Amine SABBAHI, ingénieur informatique spécialisé en Data Science, Intelligence Artificielle et Développement d'applications. Passionné par les technologies cloud et les solutions big data, je suis certifié AWS Cloud Practitioner, AWS Solutions Architect et Spark Databricks. Mon objectif est de concevoir des solutions innovantes et performantes pour transformer les données en valeur ajoutée. Curieux et rigoureux, j'aime relever des défis techniques et collaborer avec des équipes dynamiques pour atteindre des objectifs ambitieux."
+    "description": "Je suis Amine SABBAHI, Data Engineer confirmé avec 3 ans d'expérience chez BPIFrance et La Poste. Expert Python, PySpark et AWS, je suis spécialisé dans la conception de pipelines Big Data, l'industrialisation logicielle (CI/CD) et les architectures IA modernes (RAG, LangChain). Diplômé de l'ESIEA en Data & IA avec un échange à l'University of Michigan, je combine rigueur technique et vision stratégique pour transformer les données en valeur business."
   },
   "skills": {
     "title": "Mes Compétences",
     "categories": {
-      "programming": "Langages de Programmation",
-      "certifications": "Certifications",
-      "development": "developpement",
-      "ml": "Machine Learning & Data Science"
+      "programming": "Data Engineering",
+      "certifications": "Cloud & DevOps",
+      "development": "IA & Modern Stack",
+      "ml": "Certifications"
     },
     "levels": {
       "beginner": "Débutant",
@@ -38,44 +38,36 @@
   },
   "services": {
     "title": "Services",
-    "tutoring": {
-      "title": "Soutien scolaire",
-      "description": "Assistance pour les devoirs scolaires et universitaires."
-    },
     "webdev": {
-      "title": "Développement web et mobile",
-      "description": "Création de sites web et d'applications mobiles sur mesure."
+      "title": "Pipelines Data & ETL",
+      "description": "Conception et optimisation de pipelines distribués PySpark/Polars pour le traitement de volumes massifs (Big Data)."
     },
     "bots": {
-      "title": "Développement de bots",
-      "description": "Création de bots pour WhatsApp, Telegram et Discord."
+      "title": "Solutions IA & RAG",
+      "description": "Développement d'assistants intelligents basés sur LangChain, bases vectorielles et architectures RAG."
     },
     "scraping": {
-      "title": "Web scraping",
-      "description": "Collecte de données depuis des sites web pour analyse."
-    },
-    "freelance": {
-      "title": "Analyse de données & développement",
-      "description": "Consultation en analyse de données et développement de solutions."
+      "title": "Cloud & Industrialisation",
+      "description": "Mise en production via CI/CD (GitHub Actions), déploiement AWS et conteneurisation Docker."
     }
   },
   "projects": {
-    "title": "Projets",
+    "title": "Projets R&D",
     "language_app": {
-      "title": "Application d'apprentissage des langues",
-      "description": "Une application utilisant des modèles de langage (LLM) pour aider les utilisateurs à apprendre et pratiquer de nouvelles langues."
+      "title": "Assistant Documentaire RAG",
+      "description": "Architecture RAG basée sur LangChain et Supabase (Vector DB) pour l'interrogation de documentation technique. Hybrid Search, Re-ranking et déploiement Docker."
     },
     "pdf_reader": {
-      "title": "Lecteur de PDF intelligent",
-      "description": "Un outil utilisant l'IA pour extraire, résumer et analyser le contenu des documents PDF."
+      "title": "Système Multi-Agents",
+      "description": "Système multi-agents orchestrant des workflows autonomes via OpenAI API. Conteneurisation complète avec Docker."
     },
     "commitment_tracker": {
-      "title": "Suivi des engagements",
-      "description": "Une application conçue pour aider les utilisateurs à définir, suivre et atteindre leurs objectifs personnels et professionnels."
+      "title": "Pipelines Actuariels",
+      "description": "Librairies Python internes pour l'ingestion de données AWS S3 et l'industrialisation de calculs actuariels (Chaînes de Markov, Chain Ladder)."
     },
     "interview_prep": {
-      "title": "Outil de préparation aux entretiens",
-      "description": "Une plateforme offrant une collection d'énigmes, de puzzles et de questions courantes d'entretien pour aider les utilisateurs à se préparer aux entretiens techniques."
+      "title": "Dashboards Analytics",
+      "description": "Applications Dash/Plotly pour la visualisation de données et la prise de décision stratégique en entreprise."
     }
   },
   "contact": {
@@ -92,8 +84,8 @@
   },
   "footer": {
     "title": "Contactez-moi",
-    "contactInfo": "Vous pouvez me contacter via email ou téléphone.",
-    "address": "123 Rue de la Technologie, Paris, France",
+    "contactInfo": "Disponible pour des missions freelance et opportunités CDI.",
+    "address": "Île-de-France, France",
     "social": "Réseaux sociaux",
     "github": "GitHub",
     "linkedin": "LinkedIn",
